@@ -1,0 +1,7 @@
+-- Before optimization
+SELECT * FROM orders WHERE customer_id = 1;
+
+-- After optimization
+SELECT order_id, total_amount, order_date
+FROM orders
+WHERE customer_id = 1;
