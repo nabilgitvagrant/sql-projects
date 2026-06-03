@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <!-- Header -->
+            <div class="header">
+                <h1>📝 My To-Do List</h1>
+                <p class="subtitle">Stay organized and productive</p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="Add a new task..."
+                        autocomplete="off"
+                    >
+                    <button id="addBtn" class="add-btn">
+                        <span>+</span> Add
+                    </button>
+                </div>
+                <div class="input-info">
+                    <span id="charCount">0</span> / 100 characters
+                </div>
+            </div>
+
+            <!-- Filter and Sort Section -->
+            <div class="controls-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        All <span id="allCount">(0)</span>
+                    </button>
+                    <button class="filter-btn" data-filter="active">
+                        Active <span id="activeCount">(0)</span>
+                    </button>
+                    <button class="filter-btn" data-filter="completed">
+                        Completed <span id="completedCount">(0)</span>
+                    </button>
+                </div>
+                <div class="sort-buttons">
+                    <button class="sort-btn" id="sortDateBtn" title="Sort by date">
+                        🔢 Date
+                    </button>
+                    <button class="sort-btn" id="sortNameBtn" title="Sort by name">
+                        🔤 Name
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stat">
+                    <span class="stat-label">Total Tasks:</span>
+                    <span class="stat-value" id="totalTasks">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Completed:</span>
+                    <span class="stat-value" id="completedTasks">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Progress:</span>
+                    <span class="stat-value" id="progressPercent">0%</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <!-- Tasks List -->
+            <div class="todo-list" id="todoList">
+                <div class="empty-state">
+                    <p>✨ No tasks yet. Add one to get started!</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="clearCompletedBtn" class="action-btn clear-btn" style="display:none;">
+                    🗑️ Clear Completed
+                </button>
+                <button id="clearAllBtn" class="action-btn delete-btn" style="display:none;">
+                    ⚠️ Clear All
+                </button>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>💾 Auto-saving to local storage</p>
+                <p class="tip">Double-click a task to edit it</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
