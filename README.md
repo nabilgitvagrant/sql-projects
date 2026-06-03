@@ -4,7 +4,15 @@ A comprehensive collection of SQL optimization and performance examples using My
 
 ## 📋 Overview
 
-This repository contains production-ready SQL scripts, optimized queries, views, and best practices for MySQL database performance tuning and optimization.
+This repository demonstrates real-world MySQL development skills including:
+
+Database design
+Complex JOIN operations
+Query optimization
+View development
+Stored procedures
+Performance tuning
+Data analysis and reporting
 
 ## 📁 Repository Structure
 
